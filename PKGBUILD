@@ -9,8 +9,10 @@ license=('GPL3')
 depends=('qt6-base')
 makedepends=('cmake')
 source=('main.cpp'
-        'CMakeLists.txt')
+        'CMakeLists.txt'
+        'qt-calculator.desktop')
 sha256sums=('SKIP'
+            'SKIP'
             'SKIP')
 
 build() {
@@ -23,4 +25,5 @@ build() {
 package() {
   DESTDIR="${pkgdir}" cmake --install build
   mv "${pkgdir}/usr/bin/QtCalculator" "${pkgdir}/usr/bin/qt-calculator"
+  install -Dm644 qt-calculator.desktop "${pkgdir}/usr/share/applications/qt-calculator.desktop"
 }

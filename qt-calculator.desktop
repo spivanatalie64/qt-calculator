@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Qt Calculator
+Comment=A streamlined Qt6 calculator
+Exec=qt-calculator
+Icon=accessories-calculator
+Terminal=false
+Type=Application
+Categories=Qt;Utility;Calculator;
