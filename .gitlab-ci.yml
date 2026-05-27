@@ -1,0 +1,10 @@
+mirror-to-github:
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache git
+  script:
+    - git remote add github https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/spivanatalie64/qt-calculator.git
+    - git push github --all --force
+    - git push github --tags --force
+  only:
+    - master
